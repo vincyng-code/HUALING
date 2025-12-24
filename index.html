@@ -20,7 +20,7 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -54,7 +54,7 @@
             padding: 20px;
             border-radius: 10px;
             margin: 25px auto;
-            max-width: 800px;
+            max-width: 900px;
             border: 1px solid #e0d6c2;
         }
         
@@ -87,6 +87,18 @@
             }
         }
         
+        .estimated-date-display {
+            background-color: #e8f4fd;
+            color: #1971c2;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: bold;
+            border-left: 4px solid #4dabf7;
+            font-size: 1.1rem;
+        }
+        
         .countdown-display {
             background-color: #8b4513;
             color: white;
@@ -99,12 +111,6 @@
             box-shadow: 0 5px 15px rgba(139, 69, 19, 0.2);
         }
         
-        .countdown-value {
-            font-size: 1.8rem;
-            margin: 10px 0;
-            color: #ffd700;
-        }
-        
         .main-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -112,7 +118,7 @@
             margin-top: 20px;
         }
         
-        @media (max-width: 900px) {
+        @media (max-width: 1100px) {
             .main-content {
                 grid-template-columns: 1fr;
             }
@@ -358,23 +364,6 @@
             min-height: 18px;
         }
         
-        .level-selects {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-        
-        @media (max-width: 600px) {
-            .level-selects {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .level-select {
-            display: flex;
-            flex-direction: column;
-        }
-        
         .note-box {
             background-color: #e8f4fd;
             border-left: 5px solid #3498db;
@@ -401,32 +390,6 @@
             padding-bottom: 20px;
         }
         
-        .compact-inputs {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-        
-        .attribute-levels {
-            background-color: #f9f5eb;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #e0d6c2;
-            margin-bottom: 20px;
-        }
-        
-        .compact-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-        
-        @media (max-width: 700px) {
-            .compact-row {
-                grid-template-columns: 1fr;
-            }
-        }
-        
         .monster-select-info {
             display: flex;
             justify-content: space-between;
@@ -438,24 +401,6 @@
         .monster-power {
             color: #8b4513;
             font-weight: bold;
-        }
-        
-        .mobile-optimized {
-            display: block;
-        }
-        
-        .desktop-only {
-            display: none;
-        }
-        
-        @media (min-width: 768px) {
-            .mobile-optimized {
-                display: none;
-            }
-            
-            .desktop-only {
-                display: block;
-            }
         }
         
         .data-source {
@@ -506,24 +451,6 @@
             margin-top: 5px;
         }
         
-        .monster-option {
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .monster-option-name {
-            font-weight: bold;
-        }
-        
-        .monster-option-power {
-            color: #8b4513;
-        }
-        
-        .monster-option-souls {
-            color: #27ae60;
-            font-weight: bold;
-        }
-        
         .beijing-time {
             font-size: 0.9rem;
             color: #fff;
@@ -532,6 +459,295 @@
         }
         
         .current-time {
+            color: #ffcc80;
+            font-weight: bold;
+        }
+        
+        .attribute-levels-container {
+            background-color: #f9f5eb;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e0d6c2;
+            margin-bottom: 20px;
+        }
+        
+        .attribute-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
+        .attribute-table th, .attribute-table td {
+            padding: 12px 8px;
+            text-align: center;
+            border: 1px solid #e0d6c2;
+        }
+        
+        .attribute-table th {
+            background-color: #f1e8d9;
+            color: #5d4037;
+            font-weight: bold;
+        }
+        
+        .attribute-table td {
+            background-color: #fff;
+        }
+        
+        .priority-cell {
+            width: 80px;
+        }
+        
+        .priority-select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #c9b8a4;
+            background-color: #fff;
+        }
+        
+        .level-select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #c9b8a4;
+            background-color: #fff;
+        }
+        
+        .sunday-bonus-container {
+            background-color: #f1f8e9;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+            border-left: 4px solid #7cb342;
+        }
+        
+        .sunday-bonus-title {
+            font-weight: bold;
+            color: #558b2f;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .sunday-bonus-title:before {
+            content: "💰";
+            margin-right: 8px;
+        }
+        
+        .souls-breakdown {
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #f0f7ff;
+            border-radius: 8px;
+            border-left: 4px solid #4dabf7;
+        }
+        
+        .souls-breakdown-title {
+            font-weight: bold;
+            color: #1971c2;
+            margin-bottom: 10px;
+        }
+        
+        .souls-breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed #d0e7ff;
+        }
+        
+        .souls-breakdown-label {
+            color: #5d4037;
+        }
+        
+        .souls-breakdown-value {
+            font-weight: bold;
+            color: #1971c2;
+        }
+        
+        .sunday-bonus-item {
+            background-color: #e8f5e9;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #66bb6a;
+        }
+        
+        .sunday-bonus-label {
+            font-weight: bold;
+            color: #388e3c;
+            margin-bottom: 5px;
+        }
+        
+        .sunday-bonus-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+        
+        .priority-info {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 5px;
+            text-align: center;
+        }
+        
+        .sunday-bonus-checkbox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .sunday-bonus-checkbox input {
+            width: auto;
+            margin-right: 10px;
+        }
+        
+        .sunday-bonus-checkbox label {
+            font-weight: bold;
+            color: #5d4037;
+            margin-bottom: 0;
+        }
+        
+        /* 存檔功能樣式 */
+        .save-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e0d6c2;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-top: 25px;
+        }
+        
+        .save-section .section-title:before {
+            content: "💾";
+        }
+        
+        .save-slots {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 800px) {
+            .save-slots {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .save-slot {
+            background-color: #f9f5eb;
+            border: 2px solid #e0d6c2;
+            border-radius: 8px;
+            padding: 15px;
+            transition: all 0.3s;
+        }
+        
+        .save-slot.active {
+            border-color: #8b4513;
+            background-color: #f1e8d9;
+        }
+        
+        .save-slot-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .save-slot-name {
+            font-weight: bold;
+            color: #5d4037;
+            flex: 1;
+        }
+        
+        .save-slot-name-input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #c9b8a4;
+            font-size: 0.9rem;
+        }
+        
+        .save-slot-content {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 15px;
+            min-height: 60px;
+        }
+        
+        .save-slot-actions {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .save-slot-btn {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 1;
+        }
+        
+        .save-slot-btn.load {
+            background-color: #5d4037;
+            color: white;
+        }
+        
+        .save-slot-btn.load:hover {
+            background-color: #8b4513;
+        }
+        
+        .save-slot-btn.save {
+            background-color: #27ae60;
+            color: white;
+        }
+        
+        .save-slot-btn.save:hover {
+            background-color: #219653;
+        }
+        
+        .save-slot-btn.delete {
+            background-color: #e74c3c;
+            color: white;
+        }
+        
+        .save-slot-btn.delete:hover {
+            background-color: #c0392b;
+        }
+        
+        .save-slot-btn.rename {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .save-slot-btn.rename:hover {
+            background-color: #2980b9;
+        }
+        
+        .save-info {
+            font-size: 0.8rem;
+            color: #888;
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        /* 移除原先的考慮萬妖開放時間選項 */
+        .advance-options .checkbox-container:first-child {
+            display: none;
+        }
+        
+        .breakthrough-date-display {
+            font-size: 0.9rem;
+            color: #fff;
+            margin-top: 10px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .breakthrough-date-value {
             color: #ffcc80;
             font-weight: bold;
         }
@@ -546,6 +762,13 @@
         
         <div class="breakthrough-info">
             <div class="breakthrough-title">突破時間設定 (北京時間)</div>
+            
+            <div id="estimatedDateContainer" style="display: none;">
+                <div class="estimated-date-display">
+                    預計突破日期：<span id="estimatedBreakthroughDate">尚未設定</span>
+                </div>
+            </div>
+            
             <div class="breakthrough-inputs">
                 <div class="form-group">
                     <label for="daysToBreakthrough">天數：</label>
@@ -577,9 +800,16 @@
                             <span id="countdownMinutes" class="time-value">0</span>
                             <span class="time-label">分鐘</span>
                         </span>
+                        <span class="time-unit">
+                            <span id="countdownSeconds" class="time-value">0</span>
+                            <span class="time-label">秒</span>
+                        </span>
                     </div>
                     <div class="beijing-time">
                         當前北京時間：<span id="currentBeijingTime" class="current-time">00:00:00</span>
+                    </div>
+                    <div class="breakthrough-date-display">
+                        預計突破時間：<span id="breakthroughDateDisplay" class="breakthrough-date-value">尚未設定</span>
                     </div>
                 </div>
             </div>
@@ -597,7 +827,7 @@
                         <option value="合體">合體</option>
                         <option value="大成">大成</option>
                         <option value="渡劫">渡劫</option>
-                        <option value="真仙">真仙</option>
+                        <option value="真仙" selected>真仙</option>
                         <option value="金仙">金仙</option>
                         <option value="太乙">太乙</option>
                         <option value="大羅">大羅</option>
@@ -605,34 +835,105 @@
                 </div>
                 
                 <div class="form-group">
-                    <div class="attribute-levels">
-                        <label>當前屬性等級：</label>
-                        <div class="compact-row">
-                            <div class="level-select">
-                                <label for="cultivation">修為：</label>
-                                <select id="cultivation">
-                                    <!-- 選項將由JavaScript生成 -->
-                                </select>
-                            </div>
-                            <div class="level-select">
-                                <label for="quality">品質：</label>
-                                <select id="quality">
-                                    <!-- 選項將由JavaScript生成 -->
-                                </select>
-                            </div>
-                            <div class="level-select">
-                                <label for="spiritFlow">靈湧：</label>
-                                <select id="spiritFlow">
-                                    <!-- 選項將由JavaScript生成 -->
-                                </select>
-                            </div>
-                            <div class="level-select">
-                                <label for="highQuality">高品：</label>
-                                <select id="highQuality">
-                                    <!-- 選項將由JavaScript生成 -->
-                                </select>
-                            </div>
-                        </div>
+                    <div class="attribute-levels-container">
+                        <label>屬性等級設定（可設定目標等級與升級優先順序）：</label>
+                        <table class="attribute-table">
+                            <thead>
+                                <tr>
+                                    <th>屬性</th>
+                                    <th>當前等級</th>
+                                    <th>目標等級</th>
+                                    <th class="priority-cell">升級優先順序</th>
+                                </tr>
+                            </thead>
+                            <tbody id="attributeTable">
+                                <tr>
+                                    <td>修為</td>
+                                    <td>
+                                        <select id="cultivationCurrent" class="level-select">
+                                            <!-- 選項將由JavaScript生成 -->
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select id="cultivationTarget" class="level-select">
+                                            <!-- 選項將由JavaScript生成 -->
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select id="cultivationPriority" class="priority-select">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>品質</td>
+                                    <td>
+                                        <select id="qualityCurrent" class="level-select">
+                                            <!-- 選項將由JavaScript生成 -->
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select id="qualityTarget" class="level-select">
+                                            <!-- 選項將由JavaScript生成 -->
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select id="qualityPriority" class="priority-select">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>靈湧</td>
+                                    <td>
+                                        <select id="spiritFlowCurrent" class="level-select">
+                                            <!-- 選項將由JavaScript生成 -->
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select id="spiritFlowTarget" class="level-select">
+                                            <!-- 選項將由JavaScript生成 -->
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select id="spiritFlowPriority" class="priority-select">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>高品</td>
+                                    <td>
+                                        <select id="highQualityCurrent" class="level-select">
+                                            <!-- 選項將由JavaScript生成 -->
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select id="highQualityTarget" class="level-select">
+                                            <!-- 選項將由JavaScript生成 -->
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select id="highQualityPriority" class="priority-select">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="priority-info">優先順序 1 為最先升級，4 為最後升級</div>
                     </div>
                 </div>
                 
@@ -657,8 +958,9 @@
                 <div class="advance-options">
                     <div class="advance-title">進階選項：</div>
                     
-                    <div class="checkbox-container">
-                        <input type="checkbox" id="considerWeek" checked>
+                    <!-- 移除考慮萬妖開放時間選項，改為默認考慮 -->
+                    <div class="checkbox-container" style="display: none;">
+                        <input type="checkbox" id="considerWeek" checked disabled>
                         <label for="considerWeek">考慮萬妖開放時間（週三至週日）</label>
                     </div>
                     
@@ -667,22 +969,29 @@
                         <label for="keepThreeBattles">嘗試為突破當週保留3次挑戰機會</label>
                     </div>
                     
-                    <div class="checkbox-container">
-                        <input type="checkbox" id="includeSundayBonus">
-                        <label for="includeSundayBonus">考慮週日23:59結算可多得妖魄</label>
-                    </div>
-                    
-                    <div id="sundayBonusOptions" style="display: none; margin-left: 25px; margin-top: 10px;">
-                        <div class="form-group">
-                            <label for="sundayRank">週日結算排名：</label>
-                            <select id="sundayRank">
-                                <option value="1">第1名（+？妖魄）</option>
-                                <option value="2-3">第2-3名（+？妖魄）</option>
-                                <option value="4-10">第4-10名（+240妖魄）</option>
-                                <option value="11-50">第11-50名（+120妖魄）</option>
-                                <option value="other">50名以後（無額外妖魄）</option>
-                            </select>
-                            <div class="info-text">排名越高，週日結算額外妖魄越多</div>
+                    <div class="sunday-bonus-container">
+                        <div class="sunday-bonus-title">週日結算額外妖魄設定</div>
+                        
+                        <div class="sunday-bonus-checkbox">
+                            <input type="checkbox" id="includeSundayBonus">
+                            <label for="includeSundayBonus">考慮週日23:59結算可多得妖魄</label>
+                        </div>
+                        
+                        <div id="sundayBonusOptions" style="display: none;">
+                            <div class="form-group">
+                                <label for="sundayRank">預計後續每週排名：</label>
+                                <select id="sundayRank">
+                                    <option value="1">第1名 (+300妖魄)</option>
+                                    <option value="2-5">第2-5名 (+240妖魄)</option>
+                                    <option value="6-10">第6-10名 (+180妖魄)</option>
+                                    <option value="11-20">第11-20名 (+120妖魄)</option>
+                                    <option value="21-50">第21-50名 (+90妖魄)</option>
+                                    <option value="51-100">第51-100名 (+60妖魄)</option>
+                                    <option value="101-200">第101-200名 (+30妖魄)</option>
+                                    <option value="other">200名以後 (無額外妖魄)</option>
+                                </select>
+                                <div class="info-text">排名越高，週日結算額外妖魄越多</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -699,6 +1008,22 @@
                 <div class="result-item">
                     <div class="result-title">升級所需總妖魄</div>
                     <div class="result-value highlight" id="totalSouls">0</div>
+                </div>
+                
+                <div class="souls-breakdown" id="soulsBreakdown" style="display: none;">
+                    <div class="souls-breakdown-title">妖魄來源分析</div>
+                    <div class="souls-breakdown-item">
+                        <span class="souls-breakdown-label">正常萬妖挑戰妖魄：</span>
+                        <span class="souls-breakdown-value" id="normalSouls">0</span>
+                    </div>
+                    <div class="souls-breakdown-item">
+                        <span class="souls-breakdown-label">週日結算額外妖魄：</span>
+                        <span class="souls-breakdown-value" id="sundayBonusSouls">0</span>
+                    </div>
+                    <div class="souls-breakdown-item">
+                        <span class="souls-breakdown-label">總計：</span>
+                        <span class="souls-breakdown-value" id="totalSoulsBreakdown">0</span>
+                    </div>
                 </div>
                 
                 <div class="result-item">
@@ -720,7 +1045,7 @@
                 </div>
                 
                 <div class="result-item">
-                    <div class="result-title">各屬性升級需求</div>
+                    <div class="result-title">各屬性升級需求（按優先順序）</div>
                     <table class="breakdown-table">
                         <thead>
                             <tr>
@@ -728,6 +1053,7 @@
                                 <th>當前等級</th>
                                 <th>目標等級</th>
                                 <th>所需妖魄</th>
+                                <th>升級順序</th>
                             </tr>
                         </thead>
                         <tbody id="breakdownTable">
@@ -736,10 +1062,16 @@
                     </table>
                 </div>
                 
+                <div id="sundayBonusResult" class="sunday-bonus-item" style="display: none;">
+                    <div class="sunday-bonus-label">週日結算額外妖魄</div>
+                    <div class="sunday-bonus-value" id="sundayBonusTotal">0</div>
+                    <div class="info-text">此部分妖魄為週日結算額外獲得</div>
+                </div>
+                
                 <div class="result-item">
                     <div class="result-title">距離突破可挑戰次數</div>
                     <div class="result-value" id="battlesBeforeBreakthrough">0 場</div>
-                    <div class="info-text">在突破前可完成的萬妖挑戰次數</div>
+                    <div class="info-text">在突破前可完成的萬妖挑戰次數（週三至週日）</div>
                 </div>
                 
                 <div class="result-item">
@@ -761,14 +1093,27 @@
             </div>
         </div>
         
+        <!-- 新增存檔功能區域 -->
+        <div class="save-section">
+            <h2 class="section-title">數據存檔功能</h2>
+            <div class="save-slots" id="saveSlots">
+                <!-- 三個存檔槽將由JavaScript生成 -->
+            </div>
+            <div class="save-info">
+                * 數據將保存在您的瀏覽器中，清除瀏覽器數據將會刪除存檔
+            </div>
+        </div>
+        
         <div class="note-box">
             <div class="note-title">使用說明與注意事項：</div>
             <p>1. 本工具數據基於一念逍遙官方提供的化靈台升級消耗表，僅供參考。</p>
             <p>2. 萬妖挑戰每週三至週日開放，週日23:59結算，可考慮在結算前挑戰以獲得更多妖魄。</p>
             <p>3. 突破大境界當週可以提前存儲挑戰次數，建議在突破前保留3次挑戰機會。</p>
-            <p>4. 真仙、金仙、太乙、大羅四個大境界的化靈台升級消耗相同，但遊戲中需分開選擇。</p>
-            <p>5. 週日結算額外妖魄數據：第4-10名+240妖魄，第11-50名+120妖魄，前3名數據待補充。</p>
-            <p>6. <strong>如何完善週日結算數據：</strong>在JavaScript代碼中找到"sundayBonus"對象，補充第1名和第2-3名的妖魄數值即可。</p>
+            <p>4. 真仙、金仙、太乙、大羅四個大境界的化靈台升級消耗相同。</p>
+            <p>5. 週日結算額外妖魄：第1名+300妖魄，第2-5名+240妖魄，第6-10名+180妖魄，第11-20名+120妖魄，第21-50名+90妖魄，第51-100名+60妖魄，第101-200名+30妖魄。</p>
+            <p>6. 週日結算額外妖魄會單獨計算，作為週日的額外獎勵，每週只計算1次。</p>
+            <p>7. 使用存檔功能可保存當前設定，方便下次使用時快速載入。</p>
+            <p>8. 開箱子所得的妖魄請自行計算。</p>
         </div>
         
         <footer>
@@ -839,88 +1184,119 @@
         // 各境界萬妖首領與妖魄數據
         const monsterData = {
             "人界": [
-                { name: "玄猿王", power: "無", souls: 50 },
-                { name: "修羅王", power: "4000萬", souls: 80 },
-                { name: "鯤鵬妖王", power: "7000萬", souls: 120 },
-                { name: "首領妖獸", power: "8000萬", souls: 180 }
+                { name: "結丹 - 玄猿王", power: "無", souls: 80 },
+                { name: "元嬰 - 修羅王", power: "4000萬", souls: 100 },
+                { name: "元嬰 - 鯤鵬妖王", power: "7000萬", souls: 120 },
+                { name: "化神 - 邪眼蛇王", power: "無", souls: 150 },
+                { name: "化神 - 金角虎王", power: "4億", souls: 200 },
+                { name: "化神 - 紫焰堕妖王", power: "6億", souls: 250 },
+                { name: "化神 - 碧眼青獅王", power: "8億", souls: 320 }
             ],
             "返虛": [
-                { name: "基礎妖獸", power: "無", souls: 80 },
-                { name: "進階妖獸", power: "3億", souls: 120 },
-                { name: "精英妖獸", power: "8億", souls: 180 },
-                { name: "首領妖獸", power: "15億", souls: 250 }
+                { name: "廣幽妖王", power: "無", souls: 100 },
+                { name: "凌霄鶴王", power: "45億", souls: 150 },
+                { name: "赤焰獅王", power: "60億", souls: 200 },
+                { name: "寒獄真龍王", power: "75億", souls: 250 },
+                { name: "五行天妖王", power: "90億", souls: 320 }
             ],
             "合體": [
-                { name: "基礎妖獸", power: "無", souls: 120 },
-                { name: "進階妖獸", power: "30億", souls: 180 },
-                { name: "精英妖獸", power: "80億", souls: 250 },
-                { name: "首領妖獸", power: "150億", souls: 350 }
+                { name: "通天蠱王", power: "無", souls: 100 },
+                { name: "熾火靈王", power: "250億", souls: 150 },
+                { name: "犰狳妖王", power: "300億", souls: 200 },
+                { name: "大荒天獸王", power: "380億", souls: 250 },
+                { name: "赤目金猊王", power: "450億", souls: 320 }
             ],
             "大成": [
-                { name: "基礎妖獸", power: "無", souls: 150 },
-                { name: "進階妖獸", power: "200億", souls: 220 },
-                { name: "精英妖獸", power: "500億", souls: 300 },
-                { name: "首領妖獸", power: "1000億", souls: 400 }
+                { name: "青面鬼王", power: "無", souls: 100 },
+                { name: "獠牙鬼王", power: "800億", souls: 150 },
+                { name: "罪凰妖王", power: "1100億", souls: 200 },
+                { name: "巫焰巨妖王", power: "1400億", souls: 250 },
+                { name: "逆道佑聖王", power: "1700億", souls: 320 }
             ],
             "渡劫": [
-                { name: "基礎妖獸", power: "無", souls: 200 },
-                { name: "蒼玄巫王", power: "3000億", souls: 300 },
-                { name: "嘯月狼王", power: "3600億", souls: 400 },
-                { name: "深淵氏人", power: "4200億", souls: 500 },
-                { name: "蒼靈夔牛王", power: "5000億", souls: 500 }
+                { name: "彌夭蝶王", power: "無", souls: 100 },
+                { name: "蒼玄巫王", power: "3000億", souls: 150 },
+                { name: "嘯月狼王", power: "3600億", souls: 200 },
+                { name: "深淵氏人", power: "4200億", souls: 250 },
+                { name: "蒼靈夔牛王", power: "5000億", souls: 320 }
             ],
             "真仙": [
-                { name: "朱厭天王", power: "無", souls: 120 },
-                { name: "風靈天玉", power: "1.0萬億", souls: 180 },
-                { name: "兩黃天王", power: "1.2萬億", souls: 210 },
+                { name: "朱厭天王", power: "無", souls: 100 },
+                { name: "風靈天玉", power: "1.0萬億", souls: 150 },
+                { name: "兩黃天王", power: "1.2萬億", souls: 200 },
                 { name: "涅槃鳳王", power: "1.4萬億", souls: 250 },
-                { name: "九霄麒麟主", power: "1.6萬億", souls: 280 },
-                { name: "魔將相柳", power: "1.8萬億", souls: 310 },
+                { name: "九霄麒麟主", power: "1.6萬億", souls: 320 },
+                { name: "魔將相柳", power: "1.8萬億", souls: 400 }
             ],
             "金仙": [
-                { name: "基礎妖獸", power: "無", souls: 200 },
-                { name: "進階妖獸", power: "2.5萬億", souls: 300 },
-                { name: "精英妖獸", power: "3.0萬億", souls: 350 },
-                { name: "首領妖獸", power: "3.5萬億", souls: 400 },
-                { name: "神獸朱雀", power: "4.0萬億", souls: 450 },
-                { name: "神獸玄武", power: "4.5萬億", souls: 500 }
+                { name: "狐宿天王", power: "無", souls: 100 },
+                { name: "鬼宿天王", power: "4萬億", souls: 150 },
+                { name: "蒼桂天王", power: "4.5萬億", souls: 200 },
+                { name: "渡厄龍王", power: "5萬億", souls: 250 },
+                { name: "金翅大鵬王", power: "5.5萬億", souls: 320 },
+                { name: "魔將後卿", power: "6萬億", souls: 400 }
             ],
             "太乙": [
-                { name: "金烏天王", power: "無", souls: 250 },
-                { name: "歸墟鵬王", power: "11萬億", souls: 350 },
-                { name: "祸斗天王", power: "13萬億", souls: 400 },
-                { name: "御龜天王", power: "15萬億", souls: 450 },
-                { name: "覆海螭龍王", power: "17萬億", souls: 500 },
-                { name: "魔將禺疆", power: "20萬億", souls: 550 }
+                { name: "金烏天王", power: "無", souls: 100 },
+                { name: "歸墟鵬王", power: "11萬億", souls: 150 },
+                { name: "祸斗天王", power: "13萬億", souls: 200 },
+                { name: "御龜天王", power: "15萬億", souls: 250 },
+                { name: "覆海螭龍王", power: "17萬億", souls: 320 },
+                { name: "魔將禺疆", power: "20萬億", souls: 400 }
             ],
             "大羅": [
-                { name: "基礎妖獸", power: "無", souls: 300 },
-                { name: "進階妖獸", power: "10萬億", souls: 400 },
-                { name: "精英妖獸", power: "12萬億", souls: 450 },
-                { name: "首領妖獸", power: "15萬億", souls: 500 },
-                { name: "神獸混沌", power: "18萬億", souls: 550 },
-                { name: "神獸饕餮", power: "20萬億", souls: 600 }
+                { name: "遊邏天王", power: "無", souls: 100 },
+                { name: "定魂天王", power: "32萬億", souls: 150 },
+                { name: "哮荒虺王", power: "40萬億", souls: 200 },
+                { name: "黄庭鬼面王", power: "48萬億", souls: 250 },
+                { name: "光陰萬獸主", power: "56萬億", souls: 320 },
+                { name: "魔將郁垒", power: "64萬億", souls: 400 }
             ]
         };
 
-        // 週日結算額外妖魄數據（第1名和第2-3名需要完善）
+        // 週日結算額外妖魄數據
         const sundayBonus = {
-            "1": 0, // 第1名（待補充，例如：500）
-            "2-3": 0, // 第2-3名（待補充，例如：300）
-            "4-10": 240, // 第4-10名
-            "11-50": 120, // 第11-50名
-            "other": 0 // 50名以後
+            "1": 300, // 第1名
+            "2-5": 240, // 第2-5名
+            "6-10": 180, // 第6-10名
+            "11-20": 120, // 第11-20名
+            "21-50": 90, // 第21-50名
+            "51-100": 60, // 第51-100名
+            "101-200": 30, // 第101-200名
+            "other": 0 // 200名以後
         };
+
+        // 存檔相關變數
+        const SAVE_SLOTS_COUNT = 3;
+        let currentSaveSlot = null; // 當前選中的存檔槽
+        let saveData = {}; // 存檔數據
 
         // DOM元素
         const realmSelect = document.getElementById('realm');
-        const cultivationSelect = document.getElementById('cultivation');
-        const qualitySelect = document.getElementById('quality');
-        const spiritFlowSelect = document.getElementById('spiritFlow');
-        const highQualitySelect = document.getElementById('highQuality');
+        
+        // 屬性等級相關元素
+        const cultivationCurrentSelect = document.getElementById('cultivationCurrent');
+        const cultivationTargetSelect = document.getElementById('cultivationTarget');
+        const cultivationPrioritySelect = document.getElementById('cultivationPriority');
+        
+        const qualityCurrentSelect = document.getElementById('qualityCurrent');
+        const qualityTargetSelect = document.getElementById('qualityTarget');
+        const qualityPrioritySelect = document.getElementById('qualityPriority');
+        
+        const spiritFlowCurrentSelect = document.getElementById('spiritFlowCurrent');
+        const spiritFlowTargetSelect = document.getElementById('spiritFlowTarget');
+        const spiritFlowPrioritySelect = document.getElementById('spiritFlowPriority');
+        
+        const highQualityCurrentSelect = document.getElementById('highQualityCurrent');
+        const highQualityTargetSelect = document.getElementById('highQualityTarget');
+        const highQualityPrioritySelect = document.getElementById('highQualityPriority');
+        
+        // 萬妖首領相關元素
         const monsterSelect = document.getElementById('monsterSelect');
         const monsterPowerEl = document.getElementById('monsterPower');
         const monsterSoulsEl = document.getElementById('monsterSouls');
+        
+        // 萬妖令相關元素
         const ticketsInput = document.getElementById('tickets');
         
         // 時間相關元素
@@ -931,21 +1307,33 @@
         const countdownDaysEl = document.getElementById('countdownDays');
         const countdownHoursEl = document.getElementById('countdownHours');
         const countdownMinutesEl = document.getElementById('countdownMinutes');
+        const countdownSecondsEl = document.getElementById('countdownSeconds');
         const currentBeijingTimeEl = document.getElementById('currentBeijingTime');
+        const breakthroughDateDisplayEl = document.getElementById('breakthroughDateDisplay');
+        const estimatedBreakthroughDateEl = document.getElementById('estimatedBreakthroughDate');
+        const estimatedDateContainer = document.getElementById('estimatedDateContainer');
         
-        // 進階選項元素
-        const considerWeekCheckbox = document.getElementById('considerWeek');
-        const keepThreeBattlesCheckbox = document.getElementById('keepThreeBattles');
+        // 週日結算相關元素
         const includeSundayBonusCheckbox = document.getElementById('includeSundayBonus');
         const sundayBonusOptions = document.getElementById('sundayBonusOptions');
         const sundayRankSelect = document.getElementById('sundayRank');
         
+        // 進階選項元素
+        const considerWeekCheckbox = document.getElementById('considerWeek');
+        const keepThreeBattlesCheckbox = document.getElementById('keepThreeBattles');
+        
         // 結果元素
         const totalSoulsEl = document.getElementById('totalSouls');
+        const soulsBreakdownEl = document.getElementById('soulsBreakdown');
+        const normalSoulsEl = document.getElementById('normalSouls');
+        const sundayBonusSoulsEl = document.getElementById('sundayBonusSouls');
+        const totalSoulsBreakdownEl = document.getElementById('totalSoulsBreakdown');
         const totalBattlesEl = document.getElementById('totalBattles');
         const battlesWithTicketsEl = document.getElementById('battlesWithTickets');
         const weeksNeededEl = document.getElementById('weeksNeeded');
         const breakdownTableEl = document.getElementById('breakdownTable');
+        const sundayBonusResultEl = document.getElementById('sundayBonusResult');
+        const sundayBonusTotalEl = document.getElementById('sundayBonusTotal');
         
         // 時間規劃結果元素
         const battlesBeforeBreakthroughEl = document.getElementById('battlesBeforeBreakthrough');
@@ -954,6 +1342,9 @@
         const breakthroughWeekPlanEl = document.getElementById('breakthroughWeekPlan');
         const weekPlanDetailsEl = document.getElementById('weekPlanDetails');
         const strategyTipsEl = document.getElementById('strategyTips');
+        
+        // 存檔元素
+        const saveSlotsContainer = document.getElementById('saveSlots');
         
         // 按鈕
         const calculateBtn = document.getElementById('calculateBtn');
@@ -965,6 +1356,334 @@
         // 倒數計時器變數
         let countdownTimer = null;
         let breakthroughTime = null;
+        
+        // 格式化日期時間顯示
+        function formatDateTime(date) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            const hours = String(date.getHours()).padStart(2, '0');
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+            const seconds = String(date.getSeconds()).padStart(2, '0');
+            
+            // 星期幾
+            const weekdays = ['日', '一', '二', '三', '四', '五', '六'];
+            const weekday = weekdays[date.getDay()];
+            
+            return `${year}年${month}月${day}日 週${weekday} ${hours}:${minutes}:${seconds}`;
+        }
+        
+        // 格式化簡短日期顯示
+        function formatShortDate(date) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            const hours = String(date.getHours()).padStart(2, '0');
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+            
+            // 星期幾
+            const weekdays = ['日', '一', '二', '三', '四', '五', '六'];
+            const weekday = weekdays[date.getDay()];
+            
+            return `${year}/${month}/${day} 週${weekday} ${hours}:${minutes}`;
+        }
+        
+        // 初始化存檔系統
+        function initSaveSystem() {
+            // 從本地存儲加載存檔數據
+            const savedData = localStorage.getItem('yiNianXiaoYao_SaveData');
+            if (savedData) {
+                try {
+                    saveData = JSON.parse(savedData);
+                } catch (e) {
+                    console.error('讀取存檔數據失敗:', e);
+                    saveData = {};
+                }
+            }
+            
+            // 初始化存檔槽
+            renderSaveSlots();
+        }
+        
+        // 渲染存檔槽
+        function renderSaveSlots() {
+            let slotsHTML = '';
+            
+            for (let i = 0; i < SAVE_SLOTS_COUNT; i++) {
+                const slotId = `slot${i}`;
+                const slotData = saveData[slotId] || null;
+                const slotName = slotData ? slotData.name : `存檔位 ${i + 1}`;
+                const slotContent = slotData ? 
+                    `境界: ${slotData.realm}<br>修為: ${slotData.cultivationCurrent}/${slotData.cultivationTarget}<br>時間: ${slotData.daysToBreakthrough}天${slotData.hoursToBreakthrough}小時` :
+                    '空存檔位';
+                
+                const isActive = currentSaveSlot === slotId;
+                
+                slotsHTML += `
+                    <div class="save-slot ${isActive ? 'active' : ''}" id="${slotId}">
+                        <div class="save-slot-header">
+                            <div class="save-slot-name" id="slotName${i}">${slotName}</div>
+                            <button class="save-slot-btn rename" onclick="renameSaveSlot('${slotId}')">改名</button>
+                        </div>
+                        <div class="save-slot-content">
+                            ${slotContent}
+                        </div>
+                        <div class="save-slot-actions">
+                            <button class="save-slot-btn load" onclick="loadSaveSlot('${slotId}')">載入</button>
+                            <button class="save-slot-btn save" onclick="saveToSlot('${slotId}')">保存</button>
+                            <button class="save-slot-btn delete" onclick="deleteSaveSlot('${slotId}')">刪除</button>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            saveSlotsContainer.innerHTML = slotsHTML;
+        }
+        
+        // 重命名存檔
+        function renameSaveSlot(slotId) {
+            const slotData = saveData[slotId];
+            const currentName = slotData ? slotData.name : `存檔位 ${parseInt(slotId.replace('slot', '')) + 1}`;
+            
+            const newName = prompt('請輸入新的存檔名稱：', currentName);
+            if (newName && newName.trim()) {
+                if (!saveData[slotId]) {
+                    saveData[slotId] = {};
+                }
+                saveData[slotId].name = newName.trim();
+                saveToLocalStorage();
+                renderSaveSlots();
+            }
+        }
+        
+        // 載入存檔
+        function loadSaveSlot(slotId) {
+            const slotData = saveData[slotId];
+            if (!slotData) {
+                alert('此存檔位為空，無法載入！');
+                return;
+            }
+            
+            // 設定當前存檔槽
+            currentSaveSlot = slotId;
+            
+            // 載入數據到表單
+            realmSelect.value = slotData.realm || '真仙';
+            
+            cultivationCurrentSelect.value = slotData.cultivationCurrent || 0;
+            cultivationTargetSelect.value = slotData.cultivationTarget || 30;
+            cultivationPrioritySelect.value = slotData.cultivationPriority || 1;
+            
+            qualityCurrentSelect.value = slotData.qualityCurrent || 0;
+            qualityTargetSelect.value = slotData.qualityTarget || 30;
+            qualityPrioritySelect.value = slotData.qualityPriority || 2;
+            
+            spiritFlowCurrentSelect.value = slotData.spiritFlowCurrent || 0;
+            spiritFlowTargetSelect.value = slotData.spiritFlowTarget || 30;
+            spiritFlowPrioritySelect.value = slotData.spiritFlowPriority || 3;
+            
+            highQualityCurrentSelect.value = slotData.highQualityCurrent || 0;
+            highQualityTargetSelect.value = slotData.highQualityTarget || 30;
+            highQualityPrioritySelect.value = slotData.highQualityPriority || 4;
+            
+            ticketsInput.value = slotData.tickets || 0;
+            
+            daysToBreakthroughInput.value = slotData.daysToBreakthrough || 0;
+            hoursToBreakthroughInput.value = slotData.hoursToBreakthrough || 0;
+            minutesToBreakthroughInput.value = slotData.minutesToBreakthrough || 0;
+            
+            includeSundayBonusCheckbox.checked = slotData.includeSundayBonus || false;
+            sundayRankSelect.value = slotData.sundayRank || '1';
+            
+            keepThreeBattlesCheckbox.checked = slotData.keepThreeBattles !== false;
+            
+            // 更新萬妖選擇
+            initMonsterSelect();
+            
+            // 設置特定的萬妖首領
+            if (slotData.monsterSelect) {
+                monsterSelect.value = slotData.monsterSelect;
+                updateMonsterSelect();
+            }
+            
+            // 更新顯示
+            renderSaveSlots();
+            
+            // 開始倒數計時並計算
+            startCountdown();
+            calculateUpgradeNeeds();
+            
+            alert('存檔載入成功！');
+        }
+        
+        // 保存到存檔槽
+        function saveToSlot(slotId) {
+            const saveName = saveData[slotId]?.name || `存檔位 ${parseInt(slotId.replace('slot', '')) + 1}`;
+            
+            if (!confirm(`確定要保存到「${saveName}」嗎？`)) {
+                return;
+            }
+            
+            // 收集當前表單數據
+            const formData = {
+                name: saveName,
+                realm: realmSelect.value,
+                
+                cultivationCurrent: parseInt(cultivationCurrentSelect.value) || 0,
+                cultivationTarget: parseInt(cultivationTargetSelect.value) || 30,
+                cultivationPriority: parseInt(cultivationPrioritySelect.value) || 1,
+                
+                qualityCurrent: parseInt(qualityCurrentSelect.value) || 0,
+                qualityTarget: parseInt(qualityTargetSelect.value) || 30,
+                qualityPriority: parseInt(qualityPrioritySelect.value) || 2,
+                
+                spiritFlowCurrent: parseInt(spiritFlowCurrentSelect.value) || 0,
+                spiritFlowTarget: parseInt(spiritFlowTargetSelect.value) || 30,
+                spiritFlowPriority: parseInt(spiritFlowPrioritySelect.value) || 3,
+                
+                highQualityCurrent: parseInt(highQualityCurrentSelect.value) || 0,
+                highQualityTarget: parseInt(highQualityTargetSelect.value) || 30,
+                highQualityPriority: parseInt(highQualityPrioritySelect.value) || 4,
+                
+                monsterSelect: monsterSelect.value,
+                
+                tickets: parseInt(ticketsInput.value) || 0,
+                
+                daysToBreakthrough: parseInt(daysToBreakthroughInput.value) || 0,
+                hoursToBreakthrough: parseInt(hoursToBreakthroughInput.value) || 0,
+                minutesToBreakthrough: parseInt(minutesToBreakthroughInput.value) || 0,
+                
+                includeSundayBonus: includeSundayBonusCheckbox.checked,
+                sundayRank: sundayRankSelect.value,
+                
+                keepThreeBattles: keepThreeBattlesCheckbox.checked,
+                
+                saveTime: new Date().toLocaleString('zh-TW')
+            };
+            
+            // 保存到存檔數據
+            saveData[slotId] = formData;
+            saveToLocalStorage();
+            
+            // 更新當前存檔槽
+            currentSaveSlot = slotId;
+            
+            // 重新渲染存檔槽
+            renderSaveSlots();
+            
+            alert('保存成功！');
+        }
+        
+        // 刪除存檔
+        function deleteSaveSlot(slotId) {
+            const slotData = saveData[slotId];
+            if (!slotData) {
+                alert('此存檔位為空，無法刪除！');
+                return;
+            }
+            
+            if (!confirm(`確定要刪除「${slotData.name}」存檔嗎？`)) {
+                return;
+            }
+            
+            delete saveData[slotId];
+            saveToLocalStorage();
+            
+            if (currentSaveSlot === slotId) {
+                currentSaveSlot = null;
+            }
+            
+            renderSaveSlots();
+            alert('存檔刪除成功！');
+        }
+        
+        // 保存到本地存儲
+        function saveToLocalStorage() {
+            try {
+                localStorage.setItem('yiNianXiaoYao_SaveData', JSON.stringify(saveData));
+            } catch (e) {
+                console.error('保存存檔數據失敗:', e);
+                alert('保存失敗，可能是存儲空間不足！');
+            }
+        }
+        
+        // 初始化等級下拉選單
+        function initLevelSelects() {
+            const levelOptions = [];
+            for (let i = 0; i <= 30; i++) {
+                levelOptions.push(`<option value="${i}">${i}級</option>`);
+            }
+            
+            // 修為
+            cultivationCurrentSelect.innerHTML = levelOptions.join('');
+            cultivationTargetSelect.innerHTML = levelOptions.join('');
+            cultivationCurrentSelect.value = 0;
+            cultivationTargetSelect.value = 30;
+            
+            // 品質
+            qualityCurrentSelect.innerHTML = levelOptions.join('');
+            qualityTargetSelect.innerHTML = levelOptions.join('');
+            qualityCurrentSelect.value = 0;
+            qualityTargetSelect.value = 30;
+            
+            // 靈湧
+            spiritFlowCurrentSelect.innerHTML = levelOptions.join('');
+            spiritFlowTargetSelect.innerHTML = levelOptions.join('');
+            spiritFlowCurrentSelect.value = 0;
+            spiritFlowTargetSelect.value = 30;
+            
+            // 高品
+            highQualityCurrentSelect.innerHTML = levelOptions.join('');
+            highQualityTargetSelect.innerHTML = levelOptions.join('');
+            highQualityCurrentSelect.value = 0;
+            highQualityTargetSelect.value = 30;
+            
+            // 設置默認優先順序
+            cultivationPrioritySelect.value = 1;
+            qualityPrioritySelect.value = 2;
+            spiritFlowPrioritySelect.value = 3;
+            highQualityPrioritySelect.value = 4;
+        }
+        
+        // 初始化萬妖首領選擇
+        function initMonsterSelect() {
+            const realm = realmSelect.value;
+            const monsters = monsterData[realm] || [];
+            
+            let options = '';
+            monsters.forEach(monster => {
+                // 格式化顯示：戰力 - 名稱 - 妖魄
+                let displayText = '';
+                if (monster.power === "無") {
+                    displayText = `${monster.name} - ${monster.souls}妖魄`;
+                } else {
+                    displayText = `${monster.power} - ${monster.name} - ${monster.souls}妖魄`;
+                }
+                
+                options += `<option value="${monster.souls}" data-power="${monster.power}" data-name="${monster.name}">${displayText}</option>`;
+            });
+            
+            monsterSelect.innerHTML = options;
+            
+            // 更新顯示
+            if (monsters.length > 0) {
+                const firstMonster = monsters[0];
+                monsterPowerEl.textContent = `戰力要求：${firstMonster.power}`;
+                monsterSoulsEl.textContent = `妖魄：${firstMonster.souls}`;
+                currentSoulsPerBattle = firstMonster.souls;
+            }
+        }
+        
+        // 更新萬妖首領選擇
+        function updateMonsterSelect() {
+            const selectedValue = monsterSelect.value;
+            const selectedOption = monsterSelect.options[monsterSelect.selectedIndex];
+            const power = selectedOption.getAttribute('data-power');
+            
+            monsterPowerEl.textContent = `戰力要求：${power}`;
+            monsterSoulsEl.textContent = `妖魄：${selectedValue}`;
+            currentSoulsPerBattle = parseInt(selectedValue);
+        }
         
         // 獲取北京時間函數
         function getBeijingTime() {
@@ -992,76 +1711,32 @@
             currentBeijingTimeEl.textContent = formatTime(beijingTime);
         }
         
-        // 初始化等級下拉選單
-        function initLevelSelects() {
-            const levelOptions = [];
-            for (let i = 0; i <= 30; i++) {
-                levelOptions.push(`<option value="${i}">${i}級</option>`);
+        // 更新預計突破日期顯示
+        function updateBreakthroughDateDisplay() {
+            const days = parseInt(daysToBreakthroughInput.value) || 0;
+            const hours = parseInt(hoursToBreakthroughInput.value) || 0;
+            const minutes = parseInt(minutesToBreakthroughInput.value) || 0;
+            
+            // 如果沒有設定時間，隱藏日期顯示
+            if (days === 0 && hours === 0 && minutes === 0) {
+                estimatedDateContainer.style.display = "none";
+                breakthroughDateDisplayEl.textContent = "尚未設定";
+                return;
             }
             
-            cultivationSelect.innerHTML = levelOptions.join('');
-            qualitySelect.innerHTML = levelOptions.join('');
-            spiritFlowSelect.innerHTML = levelOptions.join('');
-            highQualitySelect.innerHTML = levelOptions.join('');
-            
-            // 設置默認值
-            cultivationSelect.value = 0;
-            qualitySelect.value = 0;
-            spiritFlowSelect.value = 0;
-            highQualitySelect.value = 0;
-        }
-        
-        // 初始化萬妖首領選擇
-        function initMonsterSelect() {
-            const realm = realmSelect.value;
-            const monsters = monsterData[realm] || [];
-            
-            let options = '';
-            monsters.forEach(monster => {
-                // 格式化顯示：戰力 - 名稱 - 妖魄
-                let displayText = '';
-                if (monster.power === "無") {
-                    displayText = `${monster.name} - ${monster.souls}妖魄`;
-                } else {
-                    // 提取數值部分用於排序
-                    let powerValue = monster.power;
-                    // 移除單位以便排序
-                    if (powerValue.includes("萬億")) {
-                        powerValue = parseFloat(powerValue.replace("萬億", ""));
-                        // 將萬億轉換為數字用於排序
-                        displayText = `${monster.power.replace("萬億", "")} - ${monster.name} - ${monster.souls}妖魄`;
-                    } else if (powerValue.includes("億")) {
-                        powerValue = parseFloat(powerValue.replace("億", ""));
-                        displayText = `${monster.power} - ${monster.name} - ${monster.souls}妖魄`;
-                    } else {
-                        displayText = `${monster.power} - ${monster.name} - ${monster.souls}妖魄`;
-                    }
-                }
-                
-                options += `<option value="${monster.souls}" data-power="${monster.power}" data-name="${monster.name}">${displayText}</option>`;
-            });
-            
-            monsterSelect.innerHTML = options;
+            // 計算突破時間（當前北京時間 + 設定的時間）
+            breakthroughTime = getBeijingTime();
+            breakthroughTime.setDate(breakthroughTime.getDate() + days);
+            breakthroughTime.setHours(breakthroughTime.getHours() + hours);
+            breakthroughTime.setMinutes(breakthroughTime.getMinutes() + minutes);
             
             // 更新顯示
-            if (monsters.length > 0) {
-                const firstMonster = monsters[0];
-                monsterPowerEl.textContent = `戰力要求：${firstMonster.power}`;
-                monsterSoulsEl.textContent = `妖魄：${firstMonster.souls}`;
-                currentSoulsPerBattle = firstMonster.souls;
-            }
-        }
-        
-        // 更新萬妖首領選擇
-        function updateMonsterSelect() {
-            const selectedValue = monsterSelect.value;
-            const selectedOption = monsterSelect.options[monsterSelect.selectedIndex];
-            const power = selectedOption.getAttribute('data-power');
-            const name = selectedOption.getAttribute('data-name');
+            const formattedDate = formatShortDate(breakthroughTime);
+            estimatedBreakthroughDateEl.textContent = formattedDate;
+            breakthroughDateDisplayEl.textContent = formatDateTime(breakthroughTime);
             
-            monsterPowerEl.textContent = `戰力要求：${power}`;
-            monsterSoulsEl.textContent = `妖魄：${selectedValue}`;
-            currentSoulsPerBattle = parseInt(selectedValue);
+            // 顯示日期容器
+            estimatedDateContainer.style.display = "block";
         }
         
         // 開始倒數計時
@@ -1074,6 +1749,9 @@
             const days = parseInt(daysToBreakthroughInput.value) || 0;
             const hours = parseInt(hoursToBreakthroughInput.value) || 0;
             const minutes = parseInt(minutesToBreakthroughInput.value) || 0;
+            
+            // 更新預計突破日期顯示
+            updateBreakthroughDateDisplay();
             
             // 如果沒有設定時間，隱藏倒數計時
             if (days === 0 && hours === 0 && minutes === 0) {
@@ -1130,79 +1808,158 @@
         // 計算升級需求
         function calculateUpgradeNeeds() {
             const realm = realmSelect.value;
-            const cultivationLevel = parseInt(cultivationSelect.value) || 0;
-            const qualityLevel = parseInt(qualitySelect.value) || 0;
-            const spiritFlowLevel = parseInt(spiritFlowSelect.value) || 0;
-            const highQualityLevel = parseInt(highQualitySelect.value) || 0;
             const perBattle = currentSoulsPerBattle || 0;
             const tickets = parseInt(ticketsInput.value) || 0;
             
             // 獲取當前境界的數據
             const realmData = soulData[realm];
             
-            // 計算每個屬性還需要的妖魄
-            const cultivationNeeded = calculateAttributeNeeds(realmData["修為"], cultivationLevel);
-            const qualityNeeded = calculateAttributeNeeds(realmData["品質"], qualityLevel);
-            const spiritFlowNeeded = calculateAttributeNeeds(realmData["靈湧"], spiritFlowLevel);
-            const highQualityNeeded = calculateAttributeNeeds(realmData["高品"], highQualityLevel);
+            // 獲取屬性設定
+            const attributes = [
+                {
+                    name: "修為",
+                    current: parseInt(cultivationCurrentSelect.value) || 0,
+                    target: parseInt(cultivationTargetSelect.value) || 30,
+                    priority: parseInt(cultivationPrioritySelect.value) || 1,
+                    costArray: realmData["修為"]
+                },
+                {
+                    name: "品質",
+                    current: parseInt(qualityCurrentSelect.value) || 0,
+                    target: parseInt(qualityTargetSelect.value) || 30,
+                    priority: parseInt(qualityPrioritySelect.value) || 2,
+                    costArray: realmData["品質"]
+                },
+                {
+                    name: "靈湧",
+                    current: parseInt(spiritFlowCurrentSelect.value) || 0,
+                    target: parseInt(spiritFlowTargetSelect.value) || 30,
+                    priority: parseInt(spiritFlowPrioritySelect.value) || 3,
+                    costArray: realmData["靈湧"]
+                },
+                {
+                    name: "高品",
+                    current: parseInt(highQualityCurrentSelect.value) || 0,
+                    target: parseInt(highQualityTargetSelect.value) || 30,
+                    priority: parseInt(highQualityPrioritySelect.value) || 4,
+                    costArray: realmData["高品"]
+                }
+            ];
             
-            // 計算總需求
-            const totalNeeded = cultivationNeeded + qualityNeeded + spiritFlowNeeded + highQualityNeeded;
+            // 按優先順序排序
+            attributes.sort((a, b) => a.priority - b.priority);
             
-            // 計算還需要挑戰的次數
-            const battlesNeeded = perBattle > 0 ? Math.ceil(totalNeeded / perBattle) : 0;
+            // 計算每個屬性還需要的妖魄（按優先順序）
+            let totalNeeded = 0;
+            let attributeDetails = [];
             
-            // 考慮萬妖令後的場次（每週基礎3場，萬妖令可增加場次）
-            const battlesAfterTickets = Math.max(0, battlesNeeded - tickets);
+            attributes.forEach(attr => {
+                const needed = calculateAttributeNeeds(attr.costArray, attr.current, attr.target);
+                totalNeeded += needed;
+                attributeDetails.push({
+                    name: attr.name,
+                    current: attr.current,
+                    target: attr.target,
+                    needed: needed,
+                    priority: attr.priority
+                });
+            });
             
-            // 計算需要多少周（每週3場）
-            const weeksNeeded = Math.ceil(battlesAfterTickets / 3);
+            // 計算週日結算額外妖魄
+            const includeSundayBonus = includeSundayBonusCheckbox.checked;
+            const sundayRank = sundayRankSelect.value;
+            const sundayBonusValue = sundayBonus[sundayRank] || 0;
+            
+            let sundayBonusTotal = 0;
+            let normalBattlesNeeded = 0;
+            let totalBattlesNeeded = 0;
+            
+            if (perBattle > 0) {
+                // 正常戰鬥所需場次
+                normalBattlesNeeded = Math.ceil(totalNeeded / perBattle);
+                
+                // 如果考慮週日結算，計算週日額外妖魄
+                if (includeSundayBonus && sundayBonusValue > 0) {
+                    // 計算需要多少周（每週3場）
+                    const weeksNeeded = Math.ceil(normalBattlesNeeded / 3);
+                    
+                    // 計算週日結算總額外妖魄（每週1場）
+                    sundayBonusTotal = weeksNeeded * sundayBonusValue;
+                    
+                    // 總妖魄需求（包括週日結算）
+                    const totalSoulsWithBonus = totalNeeded + sundayBonusTotal;
+                    
+                    // 總戰鬥次數（包括週日額外場次）
+                    totalBattlesNeeded = normalBattlesNeeded;
+                } else {
+                    // 不考慮週日結算
+                    sundayBonusTotal = 0;
+                    totalBattlesNeeded = normalBattlesNeeded;
+                }
+            }
+            
+            // 考慮萬妖令後的場次
+            const battlesAfterTickets = Math.max(0, totalBattlesNeeded - tickets);
+            
+            // 計算需要多少周（每週3場正常戰鬥）
+            const weeksNeeded = Math.ceil(normalBattlesNeeded / 3);
             
             // 更新顯示
-            totalSoulsEl.textContent = formatNumber(totalNeeded);
-            totalBattlesEl.textContent = `${battlesNeeded} 場`;
+            totalSoulsEl.textContent = formatNumber(totalNeeded + sundayBonusTotal);
+            
+            // 顯示妖魄分析
+            if (includeSundayBonus && sundayBonusValue > 0) {
+                soulsBreakdownEl.style.display = "block";
+                normalSoulsEl.textContent = formatNumber(totalNeeded);
+                sundayBonusSoulsEl.textContent = formatNumber(sundayBonusTotal);
+                totalSoulsBreakdownEl.textContent = formatNumber(totalNeeded + sundayBonusTotal);
+                
+                // 顯示週日結算結果
+                sundayBonusResultEl.style.display = "block";
+                sundayBonusTotalEl.textContent = formatNumber(sundayBonusTotal) + " 妖魄";
+            } else {
+                soulsBreakdownEl.style.display = "none";
+                sundayBonusResultEl.style.display = "none";
+            }
+            
+            totalBattlesEl.textContent = `${totalBattlesNeeded} 場`;
             battlesWithTicketsEl.textContent = `${battlesAfterTickets} 場`;
             weeksNeededEl.textContent = `${weeksNeeded} 周`;
             
             // 更新明細表
-            updateBreakdownTable(
-                cultivationLevel, cultivationNeeded,
-                qualityLevel, qualityNeeded,
-                spiritFlowLevel, spiritFlowNeeded,
-                highQualityLevel, highQualityNeeded
-            );
+            updateBreakdownTable(attributeDetails);
             
             // 計算時間規劃
-            calculateTimePlan(totalNeeded, perBattle, tickets, battlesNeeded, battlesAfterTickets);
+            calculateTimePlan(totalNeeded, perBattle, tickets, totalBattlesNeeded, battlesAfterTickets, sundayBonusTotal);
         }
         
         // 計算單個屬性升級所需妖魄
-        function calculateAttributeNeeds(costArray, currentLevel) {
+        function calculateAttributeNeeds(costArray, currentLevel, targetLevel) {
+            if (currentLevel >= targetLevel) return 0;
+            
             let total = 0;
-            // 從當前等級升到30級需要的妖魄
-            for (let i = currentLevel; i < 30; i++) {
+            // 從當前等級升到目標等級需要的妖魄
+            for (let i = currentLevel; i < targetLevel; i++) {
                 total += costArray[i];
             }
             return total;
         }
         
         // 更新明細表
-        function updateBreakdownTable(cultivationLevel, cultivationNeeded, qualityLevel, qualityNeeded, spiritFlowLevel, spiritFlowNeeded, highQualityLevel, highQualityNeeded) {
-            const attributes = [
-                { name: "修為", current: cultivationLevel, needed: cultivationNeeded },
-                { name: "品質", current: qualityLevel, needed: qualityNeeded },
-                { name: "靈湧", current: spiritFlowLevel, needed: spiritFlowNeeded },
-                { name: "高品", current: highQualityLevel, needed: highQualityNeeded }
-            ];
-            
+        function updateBreakdownTable(attributeDetails) {
             let tableHTML = '';
-            attributes.forEach(attr => {
+            
+            // 按優先順序排序顯示
+            attributeDetails.sort((a, b) => a.priority - b.priority);
+            
+            attributeDetails.forEach(attr => {
                 tableHTML += `
                     <tr>
                         <td>${attr.name}</td>
                         <td>${attr.current}</td>
-                        <td>30</td>
+                        <td>${attr.target}</td>
                         <td>${formatNumber(attr.needed)}</td>
+                        <td>${attr.priority}</td>
                     </tr>
                 `;
             });
@@ -1211,14 +1968,12 @@
         }
         
         // 計算時間規劃
-        function calculateTimePlan(totalNeeded, perBattle, tickets, battlesNeeded, battlesAfterTickets) {
+        function calculateTimePlan(totalNeeded, perBattle, tickets, totalBattlesNeeded, battlesAfterTickets, sundayBonusTotal) {
             const days = parseInt(daysToBreakthroughInput.value) || 0;
             const hours = parseInt(hoursToBreakthroughInput.value) || 0;
             const minutes = parseInt(minutesToBreakthroughInput.value) || 0;
-            const considerWeek = considerWeekCheckbox.checked;
             const keepThreeBattles = keepThreeBattlesCheckbox.checked;
             const includeSundayBonus = includeSundayBonusCheckbox.checked;
-            const sundayRank = sundayRankSelect.value;
             
             // 計算總分鐘數
             const totalMinutes = days * 24 * 60 + hours * 60 + minutes;
@@ -1235,132 +1990,91 @@
                 return;
             }
             
-            // 計算每場實際可獲妖魄（考慮週日結算獎勵）
-            let actualPerBattle = perBattle;
-            if (includeSundayBonus && perBattle > 0) {
-                // 假設每5場中有1場是週日結算（簡化計算）
-                const sundayBonusValue = sundayBonus[sundayRank];
-                actualPerBattle = perBattle + (sundayBonusValue / 5);
-            }
-            
-            // 重新計算考慮週日獎勵後的挑戰次數
-            let actualBattlesNeeded = perBattle > 0 ? Math.ceil(totalNeeded / actualPerBattle) : 0;
-            let actualBattlesAfterTickets = Math.max(0, actualBattlesNeeded - tickets);
-            
-            // 如果考慮萬妖開放時間（週三至週日）
+            // 考慮萬妖開放時間（週三至週日）
             let battlesBeforeBreakthrough = 0;
             let message = "";
             let weekPlan = "";
             let weekDetails = "";
             let strategy = "";
             
-            if (considerWeek) {
-                // 簡單計算：假設每週有5天開放，但每週只能打3場
-                const totalHours = totalMinutes / 60;
-                const daysAvailable = Math.floor(totalHours / 24);
-                const weeksAvailable = Math.floor(daysAvailable / 7);
-                const remainingDays = daysAvailable % 7;
-                
-                // 每週可打3場
-                battlesBeforeBreakthrough = weeksAvailable * 3;
-                
-                // 剩餘天數中，如果是週三到週日，則可能還可以打
-                // 這裡簡化計算：假設剩餘天數中有3/7的機會可以打（實際取決於具體星期幾）
-                const possibleBattlesInRemainingDays = Math.min(3, Math.floor(remainingDays * 3 / 5));
-                battlesBeforeBreakthrough += possibleBattlesInRemainingDays;
-                
-                message = `距離突破還有約 ${days} 天 ${hours} 小時 ${minutes} 分鐘，考慮萬妖開放時間，預計可完成 ${battlesBeforeBreakthrough} 場挑戰。`;
-                
-                // 檢查是否可以在突破前完成
-                if (actualBattlesAfterTickets <= battlesBeforeBreakthrough) {
-                    canCompleteBeforeBreakthroughEl.textContent = "可以";
-                    canCompleteBeforeBreakthroughEl.className = "result-value success";
-                    breakthroughMessageEl.innerHTML = `<span class="success">✓ 恭喜！您可以在突破前完成化靈臺升級。</span>`;
-                } else {
-                    canCompleteBeforeBreakthroughEl.textContent = "無法";
-                    canCompleteBeforeBreakthroughEl.className = "result-value warning";
-                    const remainingBattles = actualBattlesAfterTickets - battlesBeforeBreakthrough;
-                    breakthroughMessageEl.innerHTML = `<span class="warning">✗ 無法在突破前完成升級，還差 ${remainingBattles} 場萬妖挑戰。</span>`;
-                }
-                
-                // 突破當週規劃
-                if (keepThreeBattles) {
-                    weekPlan = "建議為突破當週保留3次挑戰機會";
-                    
-                    // 計算今天星期幾
-                    const today = getBeijingTime();
-                    const dayOfWeek = today.getDay(); // 0=週日, 1=週一, ...
-                    
-                    // 突破日期
-                    const breakthroughDate = getBeijingTime();
-                    breakthroughDate.setDate(breakthroughDate.getDate() + days);
-                    breakthroughDate.setHours(breakthroughDate.getHours() + hours);
-                    breakthroughDate.setMinutes(breakthroughDate.getMinutes() + minutes);
-                    
-                    // 判斷突破當週是否還有挑戰機會
-                    const breakthroughDayOfWeek = breakthroughDate.getDay();
-                    
-                    // 如果突破時間在週三至週日之間，則有機會
-                    if (breakthroughDayOfWeek >= 3 || breakthroughDayOfWeek === 0) {
-                        weekDetails = "突破當天在萬妖開放時間內，可以使用保留的3次挑戰機會。";
-                    } else {
-                        weekDetails = "突破當天不在萬妖開放時間內（週一或週二），建議提前使用挑戰機會。";
-                    }
-                } else {
-                    weekPlan = "不保留挑戰機會，盡快完成升級";
-                    weekDetails = "建議在突破前盡可能完成更多挑戰，以確保升級完成。";
-                }
-                
-                // 策略建議
-                strategy = "策略建議：";
-                if (includeSundayBonus) {
-                    const bonusAmount = sundayBonus[sundayRank];
-                    if (bonusAmount > 0) {
-                        strategy += ` 盡量在週日23:59前完成挑戰以獲得額外${bonusAmount}妖魄獎勵。`;
-                    }
-                }
-                
-                if (tickets > 0) {
-                    strategy += ` 您計劃使用 ${tickets} 個萬妖令，可以在關鍵時刻使用以加速升級。`;
-                }
-                
-                if (days < 7) {
-                    strategy += " 突破時間較近，建議優先升級最重要的屬性（修為/品質）。";
-                }
-                
-                // 根據妖魄獲取量給建議
-                if (currentSoulsPerBattle < 200) {
-                    strategy += " 當前每場獲取的妖魄較少，建議優先挑戰更高級的萬妖首領。";
-                }
-                
+            // 簡單計算：假設每週有5天開放，但每週只能打3場
+            const totalHours = totalMinutes / 60;
+            const daysAvailable = Math.floor(totalHours / 24);
+            const weeksAvailable = Math.floor(daysAvailable / 7);
+            const remainingDays = daysAvailable % 7;
+            
+            // 每週可打3場正常戰鬥
+            battlesBeforeBreakthrough = weeksAvailable * 3;
+            
+            // 如果考慮週日結算，加上週日額外妖魄
+            if (includeSundayBonus) {
+                // 週日結算妖魄已單獨計算，不影響戰鬥次數
+            }
+            
+            // 剩餘天數中，如果是週三到週日，則可能還可以打
+            // 這裡簡化計算：假設剩餘天數中有3/7的機會可以打（實際取決於具體星期幾）
+            const possibleBattlesInRemainingDays = Math.min(3, Math.floor(remainingDays * 3 / 5));
+            battlesBeforeBreakthrough += possibleBattlesInRemainingDays;
+            
+            message = `距離突破還有約 ${days} 天 ${hours} 小時 ${minutes} 分鐘，考慮萬妖開放時間，預計可完成 ${battlesBeforeBreakthrough} 場挑戰。`;
+            
+            // 檢查是否可以在突破前完成
+            if (battlesAfterTickets <= battlesBeforeBreakthrough) {
+                canCompleteBeforeBreakthroughEl.textContent = "可以";
+                canCompleteBeforeBreakthroughEl.className = "result-value success";
+                breakthroughMessageEl.innerHTML = `<span class="success">✓ 恭喜！您可以在突破前完成化靈臺升級。</span>`;
             } else {
-                // 不考慮萬妖開放時間，簡單按天計算
-                const totalHours = totalMinutes / 60;
-                const weeks = Math.floor(totalHours / (24 * 7));
-                const remainingDays = Math.floor((totalHours % (24 * 7)) / 24);
+                canCompleteBeforeBreakthroughEl.textContent = "無法";
+                canCompleteBeforeBreakthroughEl.className = "result-value warning";
+                const remainingBattles = battlesAfterTickets - battlesBeforeBreakthrough;
+                breakthroughMessageEl.innerHTML = `<span class="warning">✗ 無法在突破前完成升級，還差 ${remainingBattles} 場萬妖挑戰。</span>`;
+            }
+            
+            // 突破當週規劃
+            if (keepThreeBattles) {
+                weekPlan = "建議為突破當週保留3次挑戰機會";
                 
-                battlesBeforeBreakthrough = weeks * 3;
-                if (remainingDays > 0) {
-                    battlesBeforeBreakthrough += Math.min(3, 1); // 假設剩餘天數至少可以打1場
-                }
+                // 計算今天星期幾
+                const today = getBeijingTime();
+                const dayOfWeek = today.getDay(); // 0=週日, 1=週一, ...
                 
-                message = `距離突破還有約 ${days} 天 ${hours} 小時 ${minutes} 分鐘，預計可完成 ${battlesBeforeBreakthrough} 場挑戰。`;
+                // 突破日期
+                const breakthroughDate = getBeijingTime();
+                breakthroughDate.setDate(breakthroughDate.getDate() + days);
+                breakthroughDate.setHours(breakthroughDate.getHours() + hours);
+                breakthroughDate.setMinutes(breakthroughDate.getMinutes() + minutes);
                 
-                // 檢查是否可以在突破前完成
-                if (actualBattlesAfterTickets <= battlesBeforeBreakthrough) {
-                    canCompleteBeforeBreakthroughEl.textContent = "可以";
-                    canCompleteBeforeBreakthroughEl.className = "result-value success";
-                    breakthroughMessageEl.innerHTML = `<span class="success">✓ 恭喜！您可以在突破前完成化靈臺升級。</span>`;
+                // 判斷突破當週是否還有挑戰機會
+                const breakthroughDayOfWeek = breakthroughDate.getDay();
+                
+                // 如果突破時間在週三至週日之間，則有機會
+                if (breakthroughDayOfWeek >= 3 || breakthroughDayOfWeek === 0) {
+                    weekDetails = "突破當天在萬妖開放時間內，可以使用保留的3次挑戰機會。";
                 } else {
-                    canCompleteBeforeBreakthroughEl.textContent = "無法";
-                    canCompleteBeforeBreakthroughEl.className = "result-value warning";
-                    const remainingBattles = actualBattlesAfterTickets - battlesBeforeBreakthrough;
-                    breakthroughMessageEl.innerHTML = `<span class="warning">✗ 無法在突破前完成升級，還差 ${remainingBattles} 場萬妖挑戰。</span>`;
+                    weekDetails = "突破當天不在萬妖開放時間內（週一或週二），建議提前使用挑戰機會。";
                 }
-                
-                weekPlan = "未考慮萬妖開放時間，規劃可能不準確";
-                weekDetails = "";
-                strategy = "建議啟用「考慮萬妖開放時間」選項以獲得精確規劃。";
+            } else {
+                weekPlan = "不保留挑戰機會，盡快完成升級";
+                weekDetails = "建議在突破前盡可能完成更多挑戰，以確保升級完成。";
+            }
+            
+            // 策略建議
+            strategy = "策略建議：";
+            if (includeSundayBonus) {
+                strategy += ` 盡量在週日完成挑戰以獲得額外結算妖魄（每週1場）。`;
+            }
+            
+            if (tickets > 0) {
+                strategy += ` 您計劃使用 ${tickets} 個萬妖令，可以在關鍵時刻使用以加速升級。`;
+            }
+            
+            if (days < 7) {
+                strategy += " 突破時間較近，建議優先升級最重要的屬性（按設定的優先順序）。";
+            }
+            
+            // 根據妖魄獲取量給建議
+            if (currentSoulsPerBattle < 200) {
+                strategy += " 當前每場獲取的妖魄較少，建議優先挑戰更高級的萬妖首領。";
             }
             
             // 更新顯示
@@ -1377,20 +2091,37 @@
         
         // 重置表單
         function resetForm() {
-            realmSelect.value = "人界";
-            cultivationSelect.value = "0";
-            qualitySelect.value = "0";
-            spiritFlowSelect.value = "0";
-            highQualitySelect.value = "0";
+            realmSelect.value = "真仙";
+            
+            // 重置屬性等級
+            cultivationCurrentSelect.value = 0;
+            cultivationTargetSelect.value = 30;
+            cultivationPrioritySelect.value = 1;
+            
+            qualityCurrentSelect.value = 0;
+            qualityTargetSelect.value = 30;
+            qualityPrioritySelect.value = 2;
+            
+            spiritFlowCurrentSelect.value = 0;
+            spiritFlowTargetSelect.value = 30;
+            spiritFlowPrioritySelect.value = 3;
+            
+            highQualityCurrentSelect.value = 0;
+            highQualityTargetSelect.value = 30;
+            highQualityPrioritySelect.value = 4;
+            
+            // 重置其他輸入
             ticketsInput.value = "0";
             daysToBreakthroughInput.value = "0";
             hoursToBreakthroughInput.value = "0";
             minutesToBreakthroughInput.value = "0";
             countdownContainer.style.display = "none";
-            considerWeekCheckbox.checked = true;
+            estimatedDateContainer.style.display = "none";
+            
+            // 重置進階選項
             keepThreeBattlesCheckbox.checked = true;
             includeSundayBonusCheckbox.checked = false;
-            sundayRankSelect.value = "4-10";
+            sundayRankSelect.value = "1";
             sundayBonusOptions.style.display = "none";
             
             // 清除倒數計時器
@@ -1404,6 +2135,8 @@
             
             // 重置結果
             totalSoulsEl.textContent = "0";
+            soulsBreakdownEl.style.display = "none";
+            sundayBonusResultEl.style.display = "none";
             totalBattlesEl.textContent = "0 場";
             battlesWithTicketsEl.textContent = "0 場";
             weeksNeededEl.textContent = "0 周";
@@ -1422,7 +2155,7 @@
         calculateBtn.addEventListener('click', calculateUpgradeNeeds);
         resetBtn.addEventListener('click', resetForm);
         
-        // 當突破時間變化時，更新倒數計時
+        // 當突破時間變化時，更新倒數計時和預計日期
         daysToBreakthroughInput.addEventListener('input', startCountdown);
         hoursToBreakthroughInput.addEventListener('input', startCountdown);
         minutesToBreakthroughInput.addEventListener('input', startCountdown);
@@ -1449,30 +2182,42 @@
             calculateUpgradeNeeds();
         });
         
-        // 當屬性等級變化時，重新計算
-        cultivationSelect.addEventListener('change', calculateUpgradeNeeds);
-        qualitySelect.addEventListener('change', calculateUpgradeNeeds);
-        spiritFlowSelect.addEventListener('change', calculateUpgradeNeeds);
-        highQualitySelect.addEventListener('change', calculateUpgradeNeeds);
+        // 當屬性等級或優先順序變化時，重新計算
+        const attributeInputs = [
+            cultivationCurrentSelect, cultivationTargetSelect, cultivationPrioritySelect,
+            qualityCurrentSelect, qualityTargetSelect, qualityPrioritySelect,
+            spiritFlowCurrentSelect, spiritFlowTargetSelect, spiritFlowPrioritySelect,
+            highQualityCurrentSelect, highQualityTargetSelect, highQualityPrioritySelect,
+            sundayRankSelect
+        ];
+        
+        attributeInputs.forEach(input => {
+            input.addEventListener('change', calculateUpgradeNeeds);
+        });
         
         // 當萬妖令數量變化時，重新計算
         ticketsInput.addEventListener('input', calculateUpgradeNeeds);
         
         // 當進階選項變化時，重新計算
-        considerWeekCheckbox.addEventListener('change', calculateUpgradeNeeds);
         keepThreeBattlesCheckbox.addEventListener('change', calculateUpgradeNeeds);
         includeSundayBonusCheckbox.addEventListener('change', calculateUpgradeNeeds);
-        sundayRankSelect.addEventListener('change', calculateUpgradeNeeds);
         
         // 初始設定
         initLevelSelects();
         initMonsterSelect();
+        initSaveSystem(); // 初始化存檔系統
         startCountdown();
         calculateUpgradeNeeds();
         
         // 更新北京時間顯示
         updateBeijingTime();
         setInterval(updateBeijingTime, 1000);
+        
+        // 將存檔相關函數設為全局可訪問
+        window.renameSaveSlot = renameSaveSlot;
+        window.loadSaveSlot = loadSaveSlot;
+        window.saveToSlot = saveToSlot;
+        window.deleteSaveSlot = deleteSaveSlot;
     </script>
 </body>
 </html>
